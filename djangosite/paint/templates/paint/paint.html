@@ -1,0 +1,11 @@
+{% extends 'paint/header.html' %}
+{% block content %}
+{% load staticfiles %}
+<div id='canvas' style="border: 1px solid black;">
+</div>
+<input id="slider" type ="range" min ="5" max="50" step ="5" value ="5" onClick='update_size()'>
+<div class="buttons15px">
+    <input type="image" id='clear' src="{% static 'images/clear.jpg' %}" onClick='clear1()'>
+    <input type="image" src="{% static 'images/save.png' %}" onClick='save_canvas()'>
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <title>Paint</title>
+  <meta charset = 'utf-8'>
+  {% load staticfiles %}
+  <script language="javascript" type="text/javascript" src="{% static 'libraries/p5.js' %}"></script>
+  <div style="border">
+      <script language="javascript" type="text/javascript" src="{% static 'JS/Paint-JS.js' %}"></script>
+  </div>
+  <link rel="stylesheet" type="text/css" href="{% static 'CSS/bootstrap.min.css' %}">
+</head>
+
+<body class='body'>
+  <div>
+    {% block content %}
+    {% endblock %}
+  </div>
+</body>
