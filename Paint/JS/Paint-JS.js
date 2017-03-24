@@ -22,3 +22,8 @@ function draw()
 function update_size() {
     radius = document.getElementById('slider').value
 }
+
+
+function clear1() {
+    background(255,255,255);
+}
