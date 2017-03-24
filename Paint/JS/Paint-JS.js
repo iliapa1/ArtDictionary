@@ -18,3 +18,7 @@ function draw()
     }
 	
 }
+
+function update_size() {
+    radius = document.getElementById('slider').value
+}
