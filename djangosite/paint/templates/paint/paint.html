@@ -1,79 +1,74 @@
 {% extends 'paint/header.html' %}
 {% block content %}
   {% load staticfiles %}
-  {% for c in content %}
-    <p>{{c}}</p>
-  {% endfor %}
-
-  <div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-      Dropdown
-      <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-      <li><input type="image" src="{% static 'images/black.jpg' %}" onClick='update_color("black")'></li>
-      <li><input type="image" src="{% static 'images/red.jpg' %}" onClick='update_color("red")'></li>
-      <li><input type="image" src="{% static 'images/blue.png' %}" onClick='update_color("blue")'></li>
-      <li><input type="image" src="{% static 'images/yellow.png' %}" onClick='update_color("yellow")'></li>
-      <li><input type="image" src="{% static 'images/green.png' %}" onClick='update_color("green")'></li>
-      <li><input type="image" src="{% static 'images/pink.png' %}" onClick='update_color("pink")'></li>
-      <li role="separator" class="divider"></li>
-      <li><a href="#">Separated link</a></li>
-    </ul>
-  </div>
   <div class='buttons'>
       <div>
-          <input type="image" src="{% static 'images/black.jpg' %}" onClick='update_color("black")'>
+          <input type="image" src="images/black.jpg" onClick='update_color("black")'>
       </div>
       <div class="buttons5px">
-          <input type="image" src="{% static 'images/red.jpg' %}" onClick='update_color("red")'>
+          <input type="image" src="images/red.jpg" onClick='update_color("red")'>
       </div>
       <div  class="buttons5px">
-          <input type="image" src="{% static 'images/blue.png' %}" onClick='update_color("blue")'>
+          <input type="image" src="images/blue.png" onClick='update_color("blue")'>
       </div>
       <div  class="buttons5px">
-          <input type="image" src="{% static 'images/yellow.png' %}" onClick='update_color("yellow")'>
+          <input type="image" src="images/yellow.png" onClick='update_color("yellow")'>
       </div>
       <div  class="buttons5px">
-          <input type="image" src="{% static 'images/green.png' %}" onClick='update_color("green")'>
+          <input type="image" src="images/green.png" onClick='update_color("green")'>
       </div>
       <div  class="buttons5px">
-          <input type="image" src="{% static 'images/pink.jpg' %}" onClick='update_color("pink")'>
+          <input type="image" src="images/pink.jpg" onClick='update_color("pink")'>
       </div>
   <div class='buttons2'>
       <div class="buttons5px">
-          <input type="image" src="{% static 'images/orange.png' %}" onClick='update_color("orange")'>
+          <input type="image" src="images/orange.png" onClick='update_color("orange")'>
       </div>
       <div class="buttons5px">
-          <input type="image" src="{% static 'images/purple.jpg' %}" onClick='update_color("purple")'>
+          <input type="image" src="images/purple.jpg" onClick='update_color("purple")'>
       </div>
       <div class="buttons5px">
-          <input type="image" src="{% static 'images/cyan.png' %}" onClick='update_color("cyan")'>
+          <input type="image" src="images/cyan.png" onClick='update_color("cyan")'>
       </div>
       <div class="buttons5px">
-          <input type="image" src="{% static 'images/grey.png' %}" onClick='update_color("grey")'>
+          <input type="image" src="images/grey.png" onClick='update_color("grey")'>
       </div>
       <div class="buttons5px">
-          <input type="image" src="{% static 'images/brown.jpg' %}" onClick='update_color("brown")'>
+          <input type="image" src="images/brown.jpg" onClick='update_color("brown")'>
       </div>
       <div class="buttons5px">
-          <input type="image" src="{% static 'images/charteuse.jpg' %}" onClick='update_color("charteuse")'>
+          <input type="image" src="images/charteuse.jpg" onClick='update_color("charteuse")'>
       </div>
   </div>
+      <div class="buttons15px">
+          <input id="slider" type="range" min="5" value="5" max="50" step="5">
+      </div>
       <div id="margin5">
           <div class="buttons15px">
-              <input type="image" src="{% static 'images/eraser.png' %}" onClick='update_color("white")'>
-          </div>
-          <div class="buttons15px">
-              <input id="slider" type ="range" min ="5" max="100" step ="5" value ="5" onClick='update_size()'>
-          </div>
-          <div class="buttons15px">
-              <input type="image" id='clear' src="{% static 'images/clear.jpg' %}" onClick='clear1()'>
-              <input type="image" src="{% static 'images/save.png' %}" onClick='save_canvas()'>
+              <input type="image" id='clear' src="images/clear.jpg" onClick='clear1()'>
+              <input type="image" src="images/save.png" onClick='save_canvas()'>
+              <input type="image" src="images/eraser.png" onClick='update_color("white")'>
+
           </div>
           <div id='canvas' style="border: 1px solid black; top: 20%; margin-left: 10%; margin-top: -40%">
+
           </div>
+
       </div>
   </div>
+  <form id='def'>
+      <label for="your_word">Word: </label>
+      <input id="input1" type="text" name="your_word" value="current_word">
+      <input id="submit_button" type="button" value="Definition">
+  </form>
+  <select id="select1">
+    <option value="verb">Verb</option>
+    <option value="noun">Noun</option>
+    <option value="adjective">Adjective</option>
+</select>
+  <form>
+      <label for="your_word">Definition: </label>
+      <input id="definition" type="text" name="your_word" value="current_word">
+  </form>
 
 {% endblock %}

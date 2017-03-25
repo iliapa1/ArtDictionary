@@ -17,7 +17,7 @@ var charteuse;
 // setup screen and colors
 function setup() {
     var html_can = document.getElementById('canvas');
-    var canvas = createCanvas(1225, 700);
+    var canvas = createCanvas(1212, 700);
     canvas.parent(html_can);
     canvas.background(255,255,255);
     white = color(255,255,255);
@@ -42,10 +42,11 @@ function draw()
 {    
     update_size();
 
-    if(mouseIsPressed) {
+    if(mouseIsPressed && mouseX > 1) {
         strokeWeight(radius);
         line(pmouseX, pmouseY, mouseX, mouseY);
     }
+    
 	
 }
 

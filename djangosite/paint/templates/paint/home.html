@@ -1,13 +1,20 @@
 {% extends 'paint/header.html' %}
+{% load staticfiles %}
+{% load extras %}
 {% block content %}
-  {% load staticfiles %}
   <div class="cont">
       <div class="row">
           <div class="col-5"></div>
             <div class="col-5">
                 <h1 id="title">Hello World!</h1>
             </div>
-          <div class="col-1"></div>
+          <div class="col-1">
+            <input id="wordId" />
+            <select id="lexicaId" >
+              <option value="noun">noun</option>
+            </select>
+          </div>
       </div>
   </div>
+
 {% endblock %}
