@@ -17,7 +17,7 @@ var charteuse;
 // setup screen and colors
 function setup() {
     var html_can = document.getElementById('canvas');
-    var canvas = createCanvas(1212, 700);
+    var canvas = createCanvas(500, 500);
     canvas.parent(html_can);
     canvas.background(255,255,255);
     white = color(255,255,255);
@@ -34,20 +34,20 @@ function setup() {
     brown = color(210,105,30);
     charteuse = color(127,255,0);
     stroke(black);
-    
-   
+
+
 }
 // draw function
-function draw() 
-{    
+function draw()
+{
     update_size();
 
     if(mouseIsPressed && mouseX > 1) {
         strokeWeight(radius);
         line(pmouseX, pmouseY, mouseX, mouseY);
     }
-    
-	
+
+
 }
 
 
@@ -66,13 +66,13 @@ function clear1() {
 // function for saving canvas as image
 function save_canvas() {
     saveCanvas(canvas, "myCanvas", "png");
-}    
+}
 
 
 // function for changing colors of brush
 function update_color(a) {
-    
-   
+
+
     if(a == 'black') {
         stroke(black)
     }
@@ -124,7 +124,6 @@ function update_color(a) {
         stroke(charteuse)
         console.log(color);
     }
-    
+
 
 }
-    
