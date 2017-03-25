@@ -1,0 +1,13 @@
+{% extends 'paint/header.html' %}
+{% block content %}
+  {% load staticfiles %}
+
+  <form action="true/" method="post">
+      {% csrf_token %}
+      <label for="your_word">Word: </label>
+      <input id="your_word" type="text" name="your_word" value="current_word">
+      <input type="submit" value="OK">
+      {{form}}
+  </form>
+
+{% endblock %}
