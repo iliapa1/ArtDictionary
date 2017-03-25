@@ -18,4 +18,4 @@ from .scripts.Oxford import DefineWord
 #c = str(DefineWord(form, 'noun'))
 
 def index(request):
-    return render(request, 'paint/paint.html')
+    return render(request, 'paint/home.html')

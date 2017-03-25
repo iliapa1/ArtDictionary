@@ -13,6 +13,8 @@ var grey;
 var brown;
 var charteuse;
 
+
+// setup screen and colors
 function setup() {
     var html_can = document.getElementById('canvas');
     var canvas = createCanvas(1225, 700);
@@ -35,10 +37,10 @@ function setup() {
     
    
 }
-
+// draw function
 function draw() 
 {    
-    
+    update_size();
 
     if(mouseIsPressed) {
         strokeWeight(radius);
@@ -47,21 +49,28 @@ function draw()
 	
 }
 
+
+// function for changing bruh size
 function update_size() {
     radius = document.getElementById('slider').value;
 }
 
 
+// function for clearing canvas
 function clear1() {
     background(255,255,255);
 }
 
+
+// function for saving canvas as image
 function save_canvas() {
     saveCanvas(canvas, "myCanvas", "png");
 }    
 
+
+// function for changing colors of brush
 function update_color(a) {
-    update_size();
+    
    
     if(a == 'black') {
         stroke(black)

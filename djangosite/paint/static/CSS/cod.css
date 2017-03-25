@@ -1,0 +1,204 @@
+body{
+  margin: 0;
+  background: #f2f2f2;
+  font-family: "Work Sans", sans-serif;
+  /*sticky*/
+}
+
+.container{
+  width: 80%;
+  margin: 0 auto;
+}
+
+header{
+  background: #0066ff;
+  /*sticky*/
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+header::after{
+  content: '';
+  display: table;
+  clear: both;
+  width: 100%;
+}
+
+.logo{
+  float: left;
+  padding: 10px 0;
+  color: white;
+}
+
+nav{
+  float: right;
+}
+
+nav ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li{
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 14px;
+  position: relative;
+}
+
+
+nav a{
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover{
+  color: white;
+}
+
+nav a::before{
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: white;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 200ms;
+}
+
+nav a:hover::before{
+  width: 100%;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.col-0{
+    width: 0%;
+}
+
+.col-01{
+    width: 6.5%;
+}
+
+.col-1{
+    width: 8.33%;
+}
+
+.col-2{
+    width: 16,66%;
+}
+
+.col-3{
+    width: 25%;
+}
+
+.col-4{
+    width: 33.33%;
+}
+
+.col-5{
+    width: 41.66%;
+}
+
+.col-6{
+    width: 50%;
+}
+
+.col-7{
+    width: 58.33%;
+}
+
+.col-8{
+    width: 66.66%;
+}
+
+.col-9{
+    width: 75%;
+}
+
+.col-10{
+    width: 83.33%;
+}
+
+.col-11{
+    width: 91.66%;
+}
+
+.col-12{
+    width: 100%;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#slon {
+    width: 100%;
+    height: 50%
+    margin-top: auto;
+    border-radius: 2%;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+#non_image {
+    width: 100%;
+    background-color: #f2f2f2;
+}
+
+.images_home{
+    width: 5%;
+    height: 5%;
+
+
+}
+
+h3 {
+    font-family: "Work Sans", sans-serif;
+    display: inline;
+    margin: auto;
+    color: #0066ff;
+
+}
+
+.nextButton {
+    border:none;
+	padding:4px 8px 4px 8px
+}
+
+#start{
+    width: 200px;
+    height: 50px;
+    color: white;
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+.cont{
+    width: 100%;
+    background-color: #f2f2f2;
+    margin-top: 100px;
+}
+
+#title{
+    margin-top: 100px;
+}
