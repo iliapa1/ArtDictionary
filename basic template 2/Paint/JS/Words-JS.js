@@ -20,8 +20,6 @@ dictionary_noun["Airplane"] = "A heavier-than-air aircraft kept aloft by the upw
 dictionary_noun["Face"] = "The front part of the head, from the forehead to the chin";
 dictionary_noun["Word"] = "A unit of language, consisting of one or more spoken sounds or their written representation, that functions as a principal carrier of meaning";
 dictionary_noun["Rock"] = "A large mass of stone forming a hill, cliff, promontory, or the like";
-
-
 function getWord() {
     key = document.getElementById("your_word").value;
     if(key in dictionary_noun) {
