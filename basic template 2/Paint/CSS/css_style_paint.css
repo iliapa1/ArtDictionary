@@ -41,6 +41,14 @@ body{
     width: 100px;
 }
 
-#def {
+#definition {
     margin-top: 10%;
+    width: 1000px;
+    height: 50px;
+}
+
+#your_word {
+    margin-top: 10%;
+    width: 500px;
+    height: 50px;
 }

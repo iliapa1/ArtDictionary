@@ -42,10 +42,11 @@ function draw()
 {    
     update_size();
 
-    if(mouseIsPressed) {
+    if(mouseIsPressed && mouseX > 1) {
         strokeWeight(radius);
         line(pmouseX, pmouseY, mouseX, mouseY);
     }
+    
 	
 }
 
