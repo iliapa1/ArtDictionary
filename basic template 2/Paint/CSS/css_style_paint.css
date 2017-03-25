@@ -1,0 +1,42 @@
+.buttons5px{
+    margin-top: 0.3%;      
+}
+
+.buttons2{
+  margin-left: 50px;
+  margin-top: -14%;
+}
+
+.buttons15px{
+  margin-top: 15px;
+}
+
+#margin5{
+  margin-top: 5%;
+}
+
+#margin15-27{
+  margin-top: 15px;
+  margin-left: 3%;
+  margin-top: -27px;
+}
+
+#margin10px{
+  margin-top: 10px;
+}
+
+#canvas{
+  border: 1px solid black;
+  top: 20%;
+  margin-left: 20%;
+  margin-top: -40%
+}
+
+body{
+  padding: 0;
+  margin: 0;
+}
+
+#slider {
+    width: 100px;
+}
