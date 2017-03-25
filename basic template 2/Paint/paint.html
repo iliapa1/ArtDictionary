@@ -1,7 +1,9 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+    
     <script language="javascript" type="text/javascript" src="JS/Paint-JS.js"></script>
     <script language="javascript" type="text/javascript" src="JS/Words-JS.js"></script>
     <link rel="stylesheet" type="text/css" href="CSS/css_style_paint.css">
@@ -68,10 +70,14 @@
             
             </div>
         </div>
-        <form>
+        <form id='def'>
             <label for="your_word">Word: </label>
             <input id="your_word" type="text" name="your_word" value="current_word">
-            <input type="submit" value="OK" onClick='getWord()'>
+            <input type="button" value="OK" onClick='getWord()'>
+        </form>
+        <form>
+            <label for="your_word">Definition: </label>
+            <input id="definition" type="text" name="your_word" value="current_word">
         </form>
 
 
