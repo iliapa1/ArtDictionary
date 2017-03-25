@@ -13,12 +13,16 @@ body{
 header{
   background: #55d6aa;
   /*sticky*/
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 header::after{
   content: '';
   display: table;
   clear: both;
+  width: 100%;
 }
 
 .logo{
@@ -71,3 +75,86 @@ nav a::before{
 nav a:hover::before{
   width: 100%;
 }
+
+*{
+    box-sizing: border-box;
+}
+
+.col-0{
+    width: 0%;
+}
+
+.col-1{
+    width: 8.33%;
+}
+
+.col-2{
+    width: 16,66%;
+}
+
+.col-3{
+    width: 25%;
+}
+
+.col-4{
+    width: 33.33%;
+}
+
+.col-5{
+    width: 41.66%;
+}
+
+.col-6{
+    width: 50%;
+}
+
+.col-7{
+    width: 58.33%;
+}
+
+.col-8{
+    width: 66.66%;
+}
+
+.col-9{
+    width: 75%;
+}
+
+.col-10{
+    width: 83.33%;
+}
+
+.col-11{
+    width: 91.66%;
+}
+
+.col-12{
+    width: 100%;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#slon {
+    width: 100%;
+    margin-top: 30px;
+    border-radius: 2%;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+#non_image {
+    width: 100%;
+    background-color:white;
+}
+
