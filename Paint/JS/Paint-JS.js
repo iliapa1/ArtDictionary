@@ -15,7 +15,7 @@ var charteuse;
 
 function setup() {
     var html_can = document.getElementById('canvas');
-    var canvas = createCanvas(innerWidth, innerHeight);
+    var canvas = createCanvas(1225, 700);
     canvas.parent(html_can);
     canvas.background(255,255,255);
     white = color(255,255,255);
@@ -61,6 +61,7 @@ function save_canvas() {
 }    
 
 function update_color(a) {
+    update_size();
    
     if(a == 'black') {
         stroke(black)
