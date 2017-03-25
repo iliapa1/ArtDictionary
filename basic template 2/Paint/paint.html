@@ -6,27 +6,12 @@
         <script language="javascript" type="text/javascript" src="JS/Paint-JS.js"></script>
     </div>
     <link rel="stylesheet" type="text/css" href="CSS/css_style_paint.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     
 </head>
 
 <body>
-        <div class="dropdown">
-          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            Dropdown
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-            <li><input type="image" src="images/black.jpg" onClick='update_color("black")'></li>
-            <li><input type="image" src="images/red.jpg" onClick='update_color("red")'></li>
-            <li><input type="image" src="images/blue.png" onClick='update_color("blue")'></li>
-            <li><input type="image" src="images/yellow.png" onClick='update_color("yellow")'></li>
-            <li><input type="image" src="images/green.png" onClick='update_color("green")'></li>
-            <li><input type="image" src="images/pink.png" onClick='update_color("pink")'></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </div>
+       
+         
         <div class='buttons'>
             <div>
                 <input type="image" src="images/black.jpg" onClick='update_color("black")'>
@@ -70,18 +55,21 @@
                 <div class="buttons15px">
                     <input type="image" src="images/eraser.png" onClick='update_color("white")'>
                 </div>
-                <div class="buttons15px">
-                    <input id="slider" type ="range" min ="5" max="100" step ="5" value ="5" onClick='update_size()'> 
-                </div>
+               
                 <div class="buttons15px">
                     <input type="image" id='clear' src="images/clear.jpg" onClick='clear1()'>
                     <input type="image" src="images/save.png" onClick='save_canvas()'>
+                <div class="buttons15px">
+                    <input id="slider" type="range" min="5" value="5" max="50" step="5">
+                </div>
                 </div>
                 <div id='canvas' style="border: 1px solid black; top: 20%; margin-left: 10%; margin-top: -40%">
+                
                 </div>
+            
             </div>
         </div>
-        <form action="/your-word/" method="post">
+         <form action="/your-word/" method="post">
             <label for="your_word">Word: </label>
             <input id="your_word" type="text" name="your_word" value="current_word">
             <input type="submit" value="OK">
@@ -91,8 +79,7 @@
             <input id="your_word" type="text" name="your_name" value="current_word">
             <input type="submit" value="OK">
         </form>
-
-
+        
 
 
 
