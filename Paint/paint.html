@@ -1,30 +1,80 @@
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+    <div style="border">
         <script language="javascript" type="text/javascript" src="JS/Paint-JS.js"></script>
-        <link rel="stylesheet" type="text/css" href="CSS/css_style_paint.css">
-    </head>
-    <body>
-        <div id='canvas' style="border: 1px solid black;">
+    </div>
+    <link rel="stylesheet" type="text/css" href="CSS/css_style_paint.css">
+</head>
+
+<body>
+        <form>
+              Word:<br>
+              <input type="text" name="firstname"><br>   
+        </form>
+        <div class='buttons'>
+            <div>
+                <input type="image" src="images/black.jpg" onClick='update_color("black")'>
+            </div>
+            <div class="buttons5px">
+                <input type="image" src="images/red.jpg" onClick='update_color("red")'>
+            </div>
+            <div  class="buttons5px">
+                <input type="image" src="images/blue.png" onClick='update_color("blue")'>
+            </div>
+            <div  class="buttons5px">
+                <input type="image" src="images/yellow.png" onClick='update_color("yellow")'>
+            </div>
+            <div  class="buttons5px">
+                <input type="image" src="images/green.png" onClick='update_color("green")'>
+            </div>
+            <div  class="buttons5px">
+                <input type="image" src="images/pink.jpg" onClick='update_color("pink")'>
+            </div>
+        <div class='buttons2'>
+            <div class="buttons5px">
+                <input type="image" src="images/orange.png" onClick='update_color("orange")'>
+            </div>
+            <div class="buttons5px">
+                <input type="image" src="images/purple.jpg" onClick='update_color("purple")'>
+            </div>
+            <div class="buttons5px">
+                <input type="image" src="images/cyan.png" onClick='update_color("cyan")'>
+            </div>
+            <div class="buttons5px">
+                <input type="image" src="images/grey.png" onClick='update_color("grey")'>
+            </div>
+            <div class="buttons5px">
+                <input type="image" src="images/brown.jpg" onClick='update_color("brown")'>
+            </div>
+            <div class="buttons5px">
+                <input type="image" src="images/charteuse.jpg" onClick='update_color("charteuse")'>
+            </div>
         </div>
-        <div class="buttons">
-            <input id="slider" type ="range" min ="5" max="50" step ="5" value ="5" onClick='update_size()'> 
-            <input type="image" id='clear' src="images/clear.jpg" onClick='clear1()'>
-            <input type="image" src="images/save.png" onClick='save_canvas()'>
-            <input type="image" src="images/black.jpg" onClick='update_color("black")'>
-            <input type="image" src="images/red.jpg" onClick='update_color("red")'>
-            <input type="image" src="images/blue.png" onClick='update_color("blue")'>
-            <input type="image" src="images/yellow.png" onClick='update_color("yellow")'>
-            <input type="image" src="images/green.png" onClick='update_color("green")'>
-            <input type="image" src="images/pink.jpg" onClick='update_color("pink")'>
-            <input type="image" src="images/orange.png" onClick='update_color("orange")'>
-            <input type="image" src="images/purple.jpg" onClick='update_color("purple")'>
-            <input type="image" src="images/cyan.png" onClick='update_color("cyan")'>
-            <input type="image" src="images/grey.png" onClick='update_color("grey")'>
-            <input type="image" src="images/brown.jpg" onClick='update_color("brown")'>
-            <input type="image" src="images/charteuse.jpg" onClick='update_color("charteuse")'>
-            <input type="image" src="images/eraser.png" onClick='update_color("white")'>
+            <div id="margin5">
+                <div class="buttons15px">
+                    <input type="image" src="images/eraser.png" onClick='update_color("white")'>
+                </div>
+                <div class="buttons15px">
+                    <input id="slider" type ="range" min ="5" max="100" step ="10" value ="5" onClick='update_size()'> 
+                </div>
+               
+                <div class="buttons15px">
+                    <input type="image" id='clear' src="images/clear.jpg" onClick='clear1()'>
+                </div>
+                <div id="margin10px">
+                    <input type="image" src="images/save.png" onClick='save_canvas()'>
+                <div id='canvas' style="border: 1px solid black; top: 20%; margin-left: 10%; margin-top: -40%">
+                
+                </div>
+            </div>
         </div>
-    </body>
+
+
+
+
+
+
+</body>
 </html>
