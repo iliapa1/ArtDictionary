@@ -1,10 +1,10 @@
 .buttons5px{
-    margin-top: 0.3%;      
+    margin-top: 0.3%;
 }
 
 .buttons2{
-  margin-left: 50px;
-  margin-top: -14.3%; 
+  margin-left: 5%;
+  margin-top: -14.3%;
 }
 
 .buttons15px{
@@ -12,7 +12,7 @@
 }
 
 #margin5{
-  margin-top: 5px;
+  margin-top: 5%;
 }
 
 #margin15-27{
@@ -38,8 +38,8 @@ body{
 }
 
 #slider {
-    width: 100;
-    height: 10;
+    width: 150px;
+    height: 10px;
 }
 
 #definition {

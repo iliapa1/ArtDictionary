@@ -17,7 +17,7 @@ var charteuse;
 // setup screen and colors
 function setup() {
     var html_can = document.getElementById('canvas');
-    var canvas = createCanvas(600, 600);
+    var canvas = createCanvas(1170, 850);
     canvas.parent(html_can);
     canvas.background(255,255,255);
     white = color(255,255,255);
