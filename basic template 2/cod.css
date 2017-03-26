@@ -16,7 +16,7 @@ header{
   position: fixed;
   top: 0;
   width: 100%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
 }
 
 header::after{
@@ -30,6 +30,8 @@ header::after{
   float: left;
   padding: 10px 0;
   color: white;
+  width: 15%;
+  height: 5%;
 }
 
 nav{
@@ -200,4 +202,8 @@ h3 {
 
 #title{
     margin-top: 100px;
+}
+
+.active {
+     
 }
