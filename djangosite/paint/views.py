@@ -1,11 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect, JsonResponse
-
+from paint.models import Images
 import requests
 import json
 import sys
 from pprint import pprint
 import re
+from paint.forms import ImageForm
 #  -*- coding: utf-8 -*-
 
 pattern = ' '
@@ -64,7 +65,20 @@ def index(request):
     return render(request, 'paint/home.html', context = context)
 
 def paint(request):
-    return render(request, 'paint/paint.html')
+    form = ImageForm()
+    return render(request, 'paint/paint.html', {"form": form})
 
 def ajax_word(request):
     return JsonResponse({"word_definition": DefineWord(request.GET.get("word", 0), request.GET.get("lexica", 0))})
+
+def ajax_db(request):
+    word_db = request.GET.get("word", 0)
+    current_user = request.user
+    form = ImageForm(request.POST, request.FILES)
+    if form.is_valid():
+        form.save()
+        e = Images(word=word_db, users=current_user.id)
+        return JSONResponse({"word_definition": "It worked!"})
+    else:
+        form=ImageForm()
+    return JsonResponse({"word_definition": "Nope"})

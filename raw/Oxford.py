@@ -40,3 +40,5 @@ def DefineWord(word_id, lexcat):
 
             printed = 1
         i=i+1
+
+DefineWord('mouse', 'noun')

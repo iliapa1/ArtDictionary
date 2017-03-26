@@ -1,96 +1,103 @@
 {% extends 'paint/header.html' %}
 {% block content %}
   {% load staticfiles %}
-  <div class="cont">
-      <div class="row">
-          <div class="col-5"></div>
-            <div class="col-5">
-              <div class='buttons'>
-                  <div>
-                      <input type="image" src="images/black.jpg" onClick='update_color("black")'>
-                  </div>
-                  <div class="buttons5px">
-                      <input type="image" src="images/red.jpg" onClick='update_color("red")'>
-                  </div>
-                  <div  class="buttons5px">
-                      <input type="image" src="images/blue.png" onClick='update_color("blue")'>
-                  </div>
-                  <div  class="buttons5px">
-                      <input type="image" src="images/yellow.png" onClick='update_color("yellow")'>
-                  </div>
-                  <div  class="buttons5px">
-                      <input type="image" src="images/green.png" onClick='update_color("green")'>
-                  </div>
-                  <div  class="buttons5px">
-                      <input type="image" src="images/pink.jpg" onClick='update_color("pink")'>
-                  </div>
-              <div class='buttons2'>
-                  <div class="buttons5px">
-                      <input type="image" src="images/orange.png" onClick='update_color("orange")'>
-                  </div>
-                  <div class="buttons5px">
-                      <input type="image" src="images/purple.jpg" onClick='update_color("purple")'>
-                  </div>
-                  <div class="buttons5px">
-                      <input type="image" src="images/cyan.png" onClick='update_color("cyan")'>
-                  </div>
-                  <div class="buttons5px">
-                      <input type="image" src="images/grey.png" onClick='update_color("grey")'>
-                  </div>
-                  <div class="buttons5px">
-                      <input type="image" src="images/brown.jpg" onClick='update_color("brown")'>
-                  </div>
-                  <div class="buttons5px">
-                      <input type="image" src="images/charteuse.jpg" onClick='update_color("charteuse")'>
-                  </div>
-              </div>
-                  <div class="buttons15px">
-                      <input id="slider" type="range" min="5" value="5" max="50" step="5">
-                  </div>
-                  <div id="margin5">
-                      <div class="buttons15px">
-                          <input type="image" id='clear' src="images/clear.jpg" onClick='clear1()'>
-                          <input type="image" src="images/save.png" onClick='save_canvas()'>
-                          <input type="image" src="images/eraser.png" onClick='update_color("white")'>
-
-                      </div>
-                      <div id='canvas' width='700' height='500' style="border: 1px solid black; top: 20%; margin-left: 10%; margin-top: -40%">
-
-                      </div>
-
-                  </div>
-              </div>
-              <!--<form id='def'>
-                  <label for="your_word">Word: </label>
-                  <input id="input1" type="text" name="your_word" value="">
-                  <input id="submit_button" type="button" value="Definition">
-              </form>-->
-              <div class='row'>
-                <div class="col-lg-6">
-                  <div class="input-group">
-                    <input id="input1" type="text" name="your_word" class="form-control" placeholder="Your word is...">
-                    <span class="input-group-btn">
-                      <button id="submit_button" class="btn btn-default" type="button">Go!</button>
-                    </span>
-                  </div><!-- /input-group -->
-                </div><!-- /.col-lg-6 -->
-              </div><!-- /.row -->
-            <select id="select1" class="selectpicker show-tick">
-                <option value="verb">Verb</option>
-                <option value="noun">Noun</option>
-                <option value="adjective">Adjective</option>
-                <option value="adverb">Adverb</option>
-            </select>
-                <div class="row">
-                  <div class="col-lg-6">
-                    <div class="input-group">
-                      <div class="input-group-addon">Definition</div>
-                      <input id="definition" type="text" name="your_word" class="form-control" id="exampleInputAmount" placeholder="Your definition...">
-                    </div>
-                  </div>
-              </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
       </div>
-    <div class="col-1"></div>
+      <div class="col" style="margin-top:250px">
+
+      <div class='buttons' style = "">
+          <div>
+              <input type="image" src="{% static 'images/black.jpg' %}" onClick='update_color("black")'>
+          </div>
+          <div class="buttons5px">
+              <input type="image" src="{% static 'images/red.jpg' %}" onClick='update_color("red")'>
+          </div>
+          <div  class="buttons5px">
+              <input type="image" src="{% static 'images/blue.png' %}" onClick='update_color("blue")'>
+          </div>
+          <div  class="buttons5px">
+              <input type="image" src="{% static 'images/yellow.png' %}" onClick='update_color("yellow")'>
+          </div>
+          <div  class="buttons5px">
+              <input type="image" src="{% static 'images/green.png' %}" onClick='update_color("green")'>
+          </div>
+          <div  class="buttons5px">
+              <input type="image" src="{% static 'images/pink.jpg' %}" onClick='update_color("pink")'>
+          </div>
+      <div class='buttons2'>
+          <div class="buttons5px">
+              <input type="image" src="{% static 'images/orange.png' %}" onClick='update_color("orange")'>
+          </div>
+          <div class="buttons5px">
+              <input type="image" src="{% static 'images/purple.jpg' %}" onClick='update_color("purple")'>
+          </div>
+          <div class="buttons5px">
+              <input type="image" src="{% static 'images/cyan.png' %}" onClick='update_color("cyan")'>
+          </div>
+          <div class="buttons5px">
+              <input type="image" src="{% static 'images/grey.png' %}" onClick='update_color("grey")'>
+          </div>
+          <div class="buttons5px">
+              <input type="image" src="{% static 'images/brown.jpg' %}" onClick='update_color("brown")'>
+          </div>
+          <div class="buttons5px">
+              <input type="image" src="{% static 'images/charteuse.jpg' %}" onClick='update_color("charteuse")'>
+          </div>
+      </div>
+          <div id="margin5">
+              <div class="buttons15px">
+                  <input type="image" id='clear' src="{% static 'images/clear.jpg' %}" onClick='clear1()'>
+                  <input type="image" src="{% static 'images/save.png' %}" onClick='save_canvas()'>
+                  <input type="image" src="{% static 'images/eraser.png' %}" onClick='update_color("white")'>
+              </div>
+            </div>
+            <div class="buttons15px">
+                <input id="slider" style="width:100px" type="range" min="5" value="5" max="50" step="5">
+            </div>
+                <div style="" id='canvas' style="border: 1px solid black; top: 20%; margin-left: 10%; margin-top: -40%">
+                </div>
+
+          </div>
+      </div>
+                  <!--<form id='def'>
+                      <label for="your_word">Word: </label>
+                      <input id="input1" type="text" name="your_word" value="">
+                      <input id="submit_button" type="button" value="Definition">
+                  </form>-->
+        <div class='row'>
+          <div class="col-lg-6">
+            <div class="input-group">
+              <input id="input1" type="text" name="your_word" class="form-control" placeholder="Your word is...">
+              <span class="input-group-btn">
+                <button id="def_button" class="btn btn-default" type="button">Definition!</button>
+                <button id="submit_button" class="btn btn-default" type="button">Submit!</button>
+              </span>
+            </div><!-- /input-group -->
+          </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+      <select id="select1" class="selectpicker show-tick">
+          <option value="verb">Verb</option>
+          <option value="noun">Noun</option>
+          <option value="adjective">Adjective</option>
+          <option value="adverb">Adverb</option>
+      </select>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="input-group">
+                <input id="definition" type="text" name="your_word" class="form-control" id="exampleInputAmount" placeholder="Your definition...">
+              </div>
+              <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Upload</button>
+              </form>
+            </div>
+        </div>
+      </div>
+    <div class="col">
+    </div>
   </div>
 </div>
 <script type ="text/javascript" src="{% static 'JS/Select-JS.js' %}"></script>
