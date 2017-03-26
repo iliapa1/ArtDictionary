@@ -29,7 +29,7 @@ def DefineWord(word_id, lexcat):
     r = requests.get(url, headers = {'app_id': app_id, 'app_key': app_key})
 
     #print("code {}\n".format(r.status_code)) #just returns status code
-    print("text \n" + r.text)
+    #print("text \n" + r.text)
     data = json.loads(r.text)
     i=0
     printed = 0

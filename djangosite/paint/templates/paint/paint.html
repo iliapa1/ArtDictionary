@@ -54,28 +54,44 @@
                           <input type="image" src="images/eraser.png" onClick='update_color("white")'>
 
                       </div>
-                      <div id='canvas' style="border: 1px solid black; top: 20%; margin-left: 10%; margin-top: -40%">
+                      <div id='canvas' width='700' height='500' style="border: 1px solid black; top: 20%; margin-left: 10%; margin-top: -40%">
 
                       </div>
 
                   </div>
               </div>
-              <form id='def'>
+              <!--<form id='def'>
                   <label for="your_word">Word: </label>
-                  <input id="input1" type="text" name="your_word" value="current_word">
+                  <input id="input1" type="text" name="your_word" value="">
                   <input id="submit_button" type="button" value="Definition">
-              </form>
-              <select id="select1">
+              </form>-->
+              <div class='row'>
+                <div class="col-lg-6">
+                  <div class="input-group">
+                    <input id="input1" type="text" name="your_word" class="form-control" placeholder="Your word is...">
+                    <span class="input-group-btn">
+                      <button id="submit_button" class="btn btn-default" type="button">Go!</button>
+                    </span>
+                  </div><!-- /input-group -->
+                </div><!-- /.col-lg-6 -->
+              </div><!-- /.row -->
+            <select id="select1" class="selectpicker show-tick">
                 <option value="verb">Verb</option>
                 <option value="noun">Noun</option>
                 <option value="adjective">Adjective</option>
+                <option value="adverb">Adverb</option>
             </select>
-              <form>
-                  <label for="your_word">Definition: </label>
-                  <input id="definition" type="text" name="your_word" value="current_word">
-              </form>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="input-group">
+                      <div class="input-group-addon">Definition</div>
+                      <input id="definition" type="text" name="your_word" class="form-control" id="exampleInputAmount" placeholder="Your definition...">
+                    </div>
+                  </div>
+              </div>
       </div>
     <div class="col-1"></div>
   </div>
 </div>
+<script type ="text/javascript" src="{% static 'JS/Select-JS.js' %}"></script>
 {% endblock %}
