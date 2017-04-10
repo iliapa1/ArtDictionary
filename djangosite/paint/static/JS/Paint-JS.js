@@ -65,7 +65,8 @@ function clear1() {
 
 // function for saving canvas as image
 function save_canvas() {
-    saveCanvas(canvas, "myCanvas", "png");
+    word = document.getElementById("input1").value;
+    saveCanvas(canvas, word, "png");
 }
 
 

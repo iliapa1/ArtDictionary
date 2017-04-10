@@ -25,13 +25,13 @@
       <nav>
         {% if not user.is_authenticated %}
           <ul>
-            <li class="button"><a href="/home/" style="text-decoration:none">Learn!</a></li>
+            <li class="button"><a href="/home/" style="text-decoration:none">Home</a></li>
             <li class="button"><a href="/accounts/login/" style="text-decoration:none">Sign in</a></li>
-            <li class="button"><a href="/home/" style="text-decoration:none">About</a></li>
+            <li class="button"><a href="/about/" style="text-decoration:none">About</a></li>
           </ul>
         {% else %}
           <ul>
-            <li class="button"><a href="/home/" style="text-decoration:none">Learn!</a></li>
+            <li class="button"><a href="/home/" style="text-decoration:none">Home</a></li>
             <li class="button"><a href="/accounts/logout" style="text-decoration:none">Log out</a></li>
             <li class="button"><a href="/paint/" style="text-decoration:none">Draw</a></li>
           </ul>

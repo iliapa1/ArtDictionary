@@ -64,6 +64,9 @@ def index(request):
     context = {}
     return render(request, 'paint/home.html', context = context)
 
+def about(request):
+    return render(request, 'paint/about.html')
+
 def paint(request):
     form = ImageForm()
     return render(request, 'paint/paint.html', {"form": form})
